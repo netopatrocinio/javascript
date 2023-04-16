@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento</title>
+</head>
+<body>
+    <h1>Nascionalidade</h1>
+    <div>
+        <p>
+            Qual o seu País? <input type="text" name="país" id="país"> 
+            <input type="button" value="verificar" onclick="ver()">
+            
+        </p>
+        
+        <p>
+            Resposta:
+            <div id="resposta">
+
+            </div>
+        </p>
+    </div>
+    <script>
+        function ver() {
+           var txtp = window.document.querySelector(`#país`)
+        var res = window.document.querySelector(`#resposta`)
+        var p = Text (txtp.value)
+        res.innerHTML = `${p}`
+       }
+
+    </script>
+</body>
+</html>
