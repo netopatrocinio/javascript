@@ -5,31 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Documento</title>
+    <style>
+        div {
+            padding-top: 20px;
+        }
+    </style>
 </head>
 <body>
     <h1>Nascionalidade</h1>
-    <div>
-        <p>
-            Qual o seu País? <input type="text" name="país" id="país"> 
-            <input type="button" value="verificar" onclick="ver()">
-            
-        </p>
-        
-        <p>
-            Resposta:
-            <div id="resposta">
 
-            </div>
-        </p>
+    <input type="text" name="nome" id="nome">
+    <input type="button" value="clicar" onclick="clicar()">
+    <div id="res">
+
     </div>
     <script>
-        function ver() {
-           var txtp = window.document.querySelector(`#país`)
-        var res = window.document.querySelector(`#resposta`)
-        var p = Text (txtp.value)
-        res.innerHTML = `${p}`
-       }
-
+        function clicar() {
+        var n = window.document.querySelector('#nome')
+        var r = window.document.querySelector('#res')
+        var p = String(n.value)
+        res.innerHTML = p
+        res.innerHTML += `<p>Você é Brasileiro</p>`
+    }
+    if (res == Brasil) {
+        res.innerHTML += `<p>brasileiro</p>`
+    } else {
+        res.innerHTML += `<p>Estranjeiro</p>`
+    }
     </script>
+    
 </body>
 </html>
